@@ -21,20 +21,14 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-
       this.reloadCourses();
-
     }
 
 
     reloadCourses() {
-
       const courses$ = this.coursesService.findAllCourses();
-
       this.beginnerCourses$ = this.filterByCategory(courses$, 'BEGINNER');
-
       this.advancedCourses$ = this.filterByCategory(courses$, 'ADVANCED');
-
     }
 
     filterByCategory(courses$: Observable<Course[]>, category:string) {
@@ -42,7 +36,6 @@ export class HomeComponent implements OnInit {
         map(courses => courses.filter(course => course.category === category).sort(sortCoursesBySeqNo) )
       );
     }
-
 }
 
 
