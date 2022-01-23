@@ -13,7 +13,7 @@
 
     npm run server
 
-- Run the frontend part of our code, we will use the Angular CLI:
+- Run the frontend:
 
     npm start 
 
